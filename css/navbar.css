@@ -1,0 +1,66 @@
+
+html{
+    height: 100%;    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#Cuerpo{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0;
+    margin: 0;   
+    background-color: rgb(227, 233, 241);
+  }
+
+.bg-title{
+    background-color: #34495e;
+}
+
+.navbar, #Logo{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 18px;
+}
+
+
+
+
+.custom-switch{
+    margin: 8px;
+}
+
+.container{   
+    margin-top: 40px;
+}
+
+
+.form-group{
+    margin: 10px;
+    margin-bottom: 20;
+}
+
+#palabras, #vocales, #parrafos,
+#consonantes, #letras, #tildes{
+    resize: none;
+    background-color: rgb(236, 239, 243);
+    color: auto;
+}
+
+
+/* Aca esta todo lo del footer*/
+.page-footer{
+    background-color: #34495e;
+    color: rgba(255, 255, 255, 0.5);    
+    bottom: 0;
+    width:100%;
+    clear: both;
+    display: flex;
+    text-align: center;
+}
+
+#nombreFooter{
+    color: rgba(255, 255, 255, 0.5); 
+    text-decoration-line: underline;
+}
+
+div {
+    flex: 1;
+  }

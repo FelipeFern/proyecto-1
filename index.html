@@ -1,18 +1,115 @@
-<!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <head>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/app.css">
+            <!-- CSS -->
+        <link rel="stylesheet" href="Css/navbar.css">
+        <link rel="stylesheet" href="Calendario.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">  
 
-    <title>Proyecto 1</title>
-  </head>
-  <body>
-    <h1>Proyecto 1</h1>
+        <title> Calendario Personal</title>
+    </head>
 
-    <!-- JavaScript -->
-    <script src="js/app.js"></script>
-  </body>
+    <body id= "Cuerpo">
+
+        <nav class="navbar navbar-dark bg-title navbar-expand-lg sticky-top ">
+                <a href="Index.html" class="navbar-brand "style= "font-size: 24px", id="Logo"> My Website</a>                 
+                
+                <div class="navbar  ml-auto"  id="secondNavbar">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="navbar-item ">
+                            <a href="#" class="nav-link ">Blog</a>
+                        </li>
+                        <li class="navbar-item">
+                            <a href="AboutMe.html" class="nav-link ">About Me</a>
+                        </li>
+                        <li class="navbar-item">
+                            <a href="Contact.html" class="nav-link ">Contact</a>
+                        </li>
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                            <label class="custom-control-label" for="customSwitch1">Tema</label>
+                        </div>
+                    </ul>
+                   
+                </div>
+            </nav>
+        </nav>
+
+        <!-- Components-->
+        <!-- Insertar calendario a la derecha.-->
+        
+        
+        <!-- Page Content -->
+        <div class="container page-content child">
+            <div class="row child">
+                <div class="col-sm-8">
+                    <h1 class="text-center">Analizar texto </h1>
+
+                        <div class="form-group">
+                            <h5 for="exampleFormControlTextarea1">Ingrese el texto:</h5>
+                            <!--<label for="exampleFormControlTextarea1">Ingrese el texto:</label>---------OTRA FORMA DE PONERLO, PERO NO ES TITULO-->
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" ></textarea>
+                          </div>
+                    
+                
+                </div>
+                <div class="col-sm-4 ">
+                    <h1 class= "text-center"> Caracteristicas </h1>
+                  
+                    <div class="form-group" style="margin-top: 40px;">
+                        <h5 class= "caracteristicas"> Palabras</h5>
+                        <textarea class ="form-control" readonly="readonly"  rows= "1" id="palabras" ></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <h5 class= "caracteristicas"> Párrafos</h5>
+                        <textarea class ="form-control" readonly="readonly"  rows= "1" id="parrafos" ></textarea>
+                    </div>
+                        
+                    <div class="form-group">
+                        <h5 class= "caracteristicas"> Letras</h5>
+                        <textarea class ="form-control" readonly="readonly"  rows= "1" id="letras" ></textarea>
+                    </div>
+                        
+                    <div class="form-group">
+                        <h5 class= "caracteristicas"> Vocales</h5>
+                        <textarea class ="form-control" readonly="readonly"  rows= "1" id="vocales" >dfghj</textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <h5 class= "caracteristicas"> Consonantes</h5>
+                        <textarea class ="form-control" readonly="readonly"  rows= "1" id="consonantes" ></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <h5 class= "caracteristicas"> Tildes</h5>
+                        <textarea class ="form-control" readonly="readonly"  rows= "1" id="tildes" ></textarea>
+                    </div>
+                        
+                        
+                </div>
+            </div>
+        </div>
+    
+
+
+
+
+                
+        <!-- Footer -->
+        <footer class="page-footer font-small sticky-footer ">
+
+            <!-- Copyright -->
+            <div class="footer-copyright py-3">© 2020 Copyright:
+                <a href="http://github.com/FelipeFern" id="nombreFooter"> Fernandez Felipe</a>
+            </div>
+            <!-- Copyright -->
+        
+        </footer>
+        <!-- Footer -->   
+
+
+    </body>
+
+    <script src="Calendario.js"></script>
 </html>
