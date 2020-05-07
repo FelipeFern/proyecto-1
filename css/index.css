@@ -1,0 +1,109 @@
+html {
+	height: 100%;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#Cuerpo {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	padding: 0;
+	margin: 0;
+	background-color: var(--fondo);
+}
+
+#Encabezado,
+#Logo,
+#links {
+	color: var(--fuente-navbar);
+	background-color: var(--fondo-navbar);
+	font-size: 18px;
+	padding: 10px;
+}
+
+.navbar-nav {
+	margin-left: auto;
+}
+
+textarea {
+	background-color: var(--fondo-navbar);
+}
+
+.custom-control {
+	align-self: center;
+	margin: 8px;
+}
+
+.container {
+	margin-top: 40px;
+}
+
+h1 {
+	color: var(--fuente);
+}
+
+#textoIngresado {
+	height: 140px;
+}
+
+h5 {
+	margin: 10px;
+	color: var(--fuente);
+	text-align: left;
+}
+#palabras,
+#vocales,
+#parrafos,
+#consonantes,
+#caracteres,
+#tildes,
+#textoIngresado {
+	resize: none;
+	background-color: var(--fondo-textareas);
+	color: var(--fuente-textareas);
+	margin: 10px;
+	border: none;
+}
+#tildes {
+	margin-bottom: 40px;
+}
+
+#customSwtich1 {
+	opacity: 0.5;
+}
+
+/* Aca esta todo lo del footer*/
+.page-footer {
+	background-color: var(--fondo-navbar);
+	color: var(--fuente-navbar);
+	bottom: 0;
+	width: 100%;
+	clear: both;
+	display: flex;
+	text-align: center;
+}
+
+#nombreFooter {
+	color: var(--fuente-navbar);
+	text-decoration-line: underline;
+}
+
+div {
+	flex: 1;
+}
+
+.tema-primario {
+	--fondo: #434646;
+	--fuente: #8f8c83;
+	--fondo-navbar: #6e7047;
+	--fuente-navbar: #080808;
+	--fondo-textareas: rgb(157, 161, 157);
+	--fuente-textareas: rgb(36, 36, 13);
+}
+
+.tema-secundario {
+	--fondo: #cacabe;
+	--fuente: #39253b;
+	--fondo-navbar: #6c8a80;
+	--fuente-navbar: black;
+	--fondo-textareas: #e3e9e5;
+	--fuente-textareas: rgb(36, 36, 13);
+}

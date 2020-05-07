@@ -1,115 +1,162 @@
 <html>
-    <head>
+	<head>
+		<!-- CSS -->
+		<link rel="stylesheet" href="Css/index.css" />
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		/>
 
-            <!-- CSS -->
-        <link rel="stylesheet" href="Css/navbar.css">
-        <link rel="stylesheet" href="Calendario.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">  
+		<title>Textito</title>
+	</head>
 
-        <title> Calendario Personal</title>
-    </head>
+	<body id="Cuerpo">
+		<nav
+			class="navbar navbar-dark bg-title navbar-expand-lg sticky-top"
+			id="Encabezado"
+		>
+			<a
+				href="Index.html"
+				class="navbar-brand"
+				style="font-size: 24px;"
+				id="Logo"
+			>
+				My Website</a
+			>
 
-    <body id= "Cuerpo">
+			<div class="collapse navbar-collapse">
+				<ul class="navbar-nav">
+					<li class="navbar-item">
+						<a href="#" class="nav-link" id="links">Blog</a>
+					</li>
+					<li class="navbar-item">
+						<a href="AboutMe.html" class="nav-link" id="links">About Me</a>
+					</li>
+					<li class="navbar-item">
+						<a href="Contact.html" class="nav-link" id="links">Contact</a>
+					</li>
+					<li class="custom-control custom-switch">
+						<input
+							type="checkbox"
+							class="custom-control-input"
+							id="customSwitch1"
+							onclick="CambiarTema()"
+						/>
+						<label class="custom-control-label" for="customSwitch1">Tema</label>
+					</li>
+				</ul>
+			</div>
+		</nav>
 
-        <nav class="navbar navbar-dark bg-title navbar-expand-lg sticky-top ">
-                <a href="Index.html" class="navbar-brand "style= "font-size: 24px", id="Logo"> My Website</a>                 
-                
-                <div class="navbar  ml-auto"  id="secondNavbar">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="navbar-item ">
-                            <a href="#" class="nav-link ">Blog</a>
-                        </li>
-                        <li class="navbar-item">
-                            <a href="AboutMe.html" class="nav-link ">About Me</a>
-                        </li>
-                        <li class="navbar-item">
-                            <a href="Contact.html" class="nav-link ">Contact</a>
-                        </li>
-                        <div class="custom-control custom-switch">
-                            <input type="checkbox" class="custom-control-input" id="customSwitch1">
-                            <label class="custom-control-label" for="customSwitch1">Tema</label>
-                        </div>
-                    </ul>
-                   
-                </div>
-            </nav>
-        </nav>
+		<!-- Components-->
+		<!-- Insertar calendario a la derecha.-->
 
-        <!-- Components-->
-        <!-- Insertar calendario a la derecha.-->
-        
-        
-        <!-- Page Content -->
-        <div class="container page-content child">
-            <div class="row child">
-                <div class="col-sm-8">
-                    <h1 class="text-center">Analizar texto </h1>
+		<!-- Page Content -->
+		<div class="container page-content child">
+			<div class="row child">
+				<div class="col-sm-8">
+					<h1 class="text-center">Analizar texto</h1>
 
-                        <div class="form-group">
-                            <h5 for="exampleFormControlTextarea1">Ingrese el texto:</h5>
-                            <!--<label for="exampleFormControlTextarea1">Ingrese el texto:</label>---------OTRA FORMA DE PONERLO, PERO NO ES TITULO-->
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" ></textarea>
-                          </div>
-                    
-                
-                </div>
-                <div class="col-sm-4 ">
-                    <h1 class= "text-center"> Caracteristicas </h1>
-                  
-                    <div class="form-group" style="margin-top: 40px;">
-                        <h5 class= "caracteristicas"> Palabras</h5>
-                        <textarea class ="form-control" readonly="readonly"  rows= "1" id="palabras" ></textarea>
-                    </div>
-                    
-                    <div class="form-group">
-                        <h5 class= "caracteristicas"> Párrafos</h5>
-                        <textarea class ="form-control" readonly="readonly"  rows= "1" id="parrafos" ></textarea>
-                    </div>
-                        
-                    <div class="form-group">
-                        <h5 class= "caracteristicas"> Letras</h5>
-                        <textarea class ="form-control" readonly="readonly"  rows= "1" id="letras" ></textarea>
-                    </div>
-                        
-                    <div class="form-group">
-                        <h5 class= "caracteristicas"> Vocales</h5>
-                        <textarea class ="form-control" readonly="readonly"  rows= "1" id="vocales" >dfghj</textarea>
-                    </div>
-                    
-                    <div class="form-group">
-                        <h5 class= "caracteristicas"> Consonantes</h5>
-                        <textarea class ="form-control" readonly="readonly"  rows= "1" id="consonantes" ></textarea>
-                    </div>
+					<div class="form-group">
+						<h5 id="Algo">Ingrese el texto:</h5>
+						<textarea
+							class="form-control"
+							id="textoIngresado"
+							rows="5"
+						></textarea>
+					</div>
 
-                    <div class="form-group">
-                        <h5 class= "caracteristicas"> Tildes</h5>
-                        <textarea class ="form-control" readonly="readonly"  rows= "1" id="tildes" ></textarea>
-                    </div>
-                        
-                        
-                </div>
-            </div>
-        </div>
-    
+					<button
+						type="button"
+						class="btn btn-outline-secondary"
+						id="botonAnalizar"
+						onclick="contar(this)"
+					>
+						Analizar
+					</button>
+				</div>
+				<div class="col-sm-4">
+					<h1 class="text-center">Caracteristicas</h1>
 
+					<div class="form-group" style="margin-top: 40px;">
+						<h5 class="caracteristicas">Palabras</h5>
+						<textarea
+							class="form-control"
+							readonly="readonly"
+							rows="1"
+							id="palabras"
+						></textarea>
+					</div>
 
+					<div class="form-group">
+						<h5 class="caracteristicas">Parrafos</h5>
+						<textarea
+							class="form-control"
+							readonly="readonly"
+							rows="1"
+							id="parrafos"
+						></textarea>
+					</div>
 
+					<div class="form-group">
+						<h5 class="caracteristicas">Caracteres</h5>
+						<textarea
+							class="form-control"
+							readonly="readonly"
+							rows="1"
+							id="caracteres"
+						></textarea>
+					</div>
 
-                
-        <!-- Footer -->
-        <footer class="page-footer font-small sticky-footer ">
+					<div class="form-group">
+						<h5 class="caracteristicas">Vocales</h5>
+						<textarea
+							class="form-control"
+							readonly="readonly"
+							rows="1"
+							id="vocales"
+						></textarea>
+					</div>
 
-            <!-- Copyright -->
-            <div class="footer-copyright py-3">© 2020 Copyright:
-                <a href="http://github.com/FelipeFern" id="nombreFooter"> Fernandez Felipe</a>
-            </div>
-            <!-- Copyright -->
-        
-        </footer>
-        <!-- Footer -->   
+					<div class="form-group">
+						<h5 class="caracteristicas">Consonantes</h5>
+						<textarea
+							class="form-control"
+							readonly="readonly"
+							rows="1"
+							id="consonantes"
+						></textarea>
+					</div>
 
+					<div class="form-group">
+						<h5 class="caracteristicas">Tildes</h5>
+						<textarea
+							class="form-control"
+							readonly="readonly"
+							rows="1"
+							id="tildes"
+						></textarea>
+					</div>
+				</div>
+			</div>
+		</div>
 
-    </body>
+		<!-- Footer -->
+		<footer class="page-footer font-small sticky-footer">
+			<!-- Copyright -->
+			<div class="footer-copyright py-3">
+				© 2020 Copyright:
+				<a href="http://github.com/FelipeFern" id="nombreFooter">
+					Fernandez Felipe</a
+				>
+			</div>
+			<!-- Copyright -->
+		</footer>
+		<!-- Footer -->
 
-    <script src="Calendario.js"></script>
+		<script src="js/jquery-3.4.1.slim.min.js"></script>
+
+		<script type="text/javascript" src="js/Text.js"></script>
+		<script type="text/javascript" src="js/temas.js"></script>
+	</body>
 </html>
