@@ -12,24 +12,40 @@ html {
 
 #Encabezado,
 #Logo,
-#links {
+#links,
+.custom-control {
 	color: var(--fuente-navbar);
 	background-color: var(--fondo-navbar);
-	font-size: 18px;
+	font-size: 25px;
 	padding: 10px;
+	align-self: center;
+}
+
+#Logo {
+	height: 60px;
+	width: 250px;
 }
 
 .navbar-nav {
 	margin-left: auto;
 }
 
-textarea {
+#dropdownMenu {
+	align-self: center;
 	background-color: var(--fondo-navbar);
+	border: 0px;
+	font-size: 25;
+	padding: 10px;
+	color: var(--fuente-navbar);
 }
 
-.custom-control {
-	align-self: center;
-	margin: 8px;
+.dropdown-menu {
+	background-color: var(--fondo-navbar) !important;
+	color: var(--fuente-navbar) !important;
+}
+
+textarea {
+	background-color: var(--fondo-navbar);
 }
 
 .container {
@@ -40,45 +56,47 @@ h1 {
 	color: var(--fuente);
 }
 
-#textoIngresado {
-	height: 140px;
-}
-
 h5 {
 	margin: 10px;
 	color: var(--fuente);
 	text-align: left;
 }
+
 #palabras,
 #vocales,
 #parrafos,
 #consonantes,
 #caracteres,
 #tildes,
-#textoIngresado {
+#textoIngresado,
+#aBuscar,
+#cantidad,
+#respuestas {
 	resize: none;
 	background-color: var(--fondo-textareas);
 	color: var(--fuente-textareas);
 	margin: 10px;
 	border: none;
 }
-#tildes {
-	margin-bottom: 40px;
+
+#oraciones {
+	margin-top: 15px !important;
 }
 
-#customSwtich1 {
-	opacity: 0.5;
+.form-group {
+	margin-top: 30px;
 }
 
 /* Aca esta todo lo del footer*/
 .page-footer {
 	background-color: var(--fondo-navbar);
 	color: var(--fuente-navbar);
-	bottom: 0;
 	width: 100%;
 	clear: both;
 	display: flex;
 	text-align: center;
+	bottom: 0;
+	position: relative;
 }
 
 #nombreFooter {
@@ -90,6 +108,10 @@ div {
 	flex: 1;
 }
 
+.spacer {
+	flex: 1;
+}
+/* Todo lo relacionado con los diferentes temas. */
 .tema-primario {
 	--fondo: #434646;
 	--fuente: #8f8c83;

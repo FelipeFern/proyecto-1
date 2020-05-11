@@ -1,71 +1,105 @@
-<html>
-    <head>
+<html lang= "es">
+	<head>
+		<!-- CSS -->
+		<link rel="stylesheet" href="Css/index.css" />
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		/>
 
-        <!-- CSS -->
-    <link rel="stylesheet" href="Css/navbar.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+		<title>Textito</title>
+	</head>
 
-    <title> Analizador de textos</title>
-    </head>
+	<body id="Cuerpo">
+		<nav
+			class="navbar navbar-dark bg-title navbar-expand-md sticky-top"
+			id="Encabezado"
+		>
+			<img
+				class="navbar-brand"
+				id="Logo"
+				src="Logo/textito.png"				
+			>
+				</img
+			>
 
-    <body class = "d-flex flex-column" id="Cuerpo">
-        <nav class="navbar navbar-dark bg-title navbar-expand-lg sticky-top ">
-            <a href="Index.html" class="navbar-brand "style= "font-size: 24px", id="Logo"> My Website</a>                 
-            
-            <div class="navbar  ml-auto"  id="secondNavbar">
-                <ul class="navbar-nav ml-auto">
-                    <li class="navbar-item ">
-                        <a href="#" class="nav-link ">Blog</a>
-                    </li>
-                    <li class="navbar-item">
-                        <a href="AboutMe.html" class="nav-link ">About Me</a>
-                    </li>
-                    <li class="navbar-item">
-                        <a href="Contact.html" class="nav-link ">Contact</a>
-                    </li>
-                    <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="customSwitch1" onclick="CambiarTema()">
-                        <label class="custom-control-label" for="customSwitch1">Tema</label>
-                    </div>
-                </ul>
-               
-            </div>
-        </nav>
-    </nav>
+		
+			<ul class="navbar-nav">
+				<li class="navbar-item">
+					<a href="index.html" class="nav-link" id="links">Home</a>
+				</li>
+				<li class="navbar-item">
+					<a href="AboutMe.html" class="nav-link" id="links">About Me</a>
+				</li>
+				<li class="navbar-item">
+					<a href="Contact.html" class="nav-link" id="links">Contact</a>
+				</li>
+				<li>
+					<div class="dropdown">
+						<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown" ><!--aria-haspopup="true" aria-expanded="false" TAMBIEN ESTABA COMO ATRIBUTO PERO NOSE QUE ERAN ASIQUE LO SAQUE.-->
+						  Tema
+						</button>
+						<div class="dropdown-menu" aria-labelledby="dropdownMenu">
+						  <button class="dropdown-item" type="button" onclick="setTheme('tema-secundario')">Claro</button>
+						  <button class="dropdown-item" type="button" onclick="setTheme('tema-primario')" >Oscuro</button>
+						</div>
+					  </div>
+				</li> 
+			</ul>
+			
+		</nav>
 
-        <!-- Components-->
-        <!-- Insertar calendario a la derecha.-->
-        
-        
+		<!-- Components-->
+		<!-- Insertar calendario a la derecha.-->
+
+		      
     <!-- Page Content -->
     <div class="container page-content child">
         <div class="row child">
             <div class="col-sm-12">
                 <h1 class="text-center">Comentar acerca de mi persona</h1>
-                <p>Primero que nada, mi nombre es Felipe Fernandez, soy estudiante de la carrera 
-                    Ingenieria en Sistemas de la Información en la Universidad Nacional del Sur.
-                </p>
+                <p>Mi nombre es Felipe Fernandez, soy estudiante de la carrera 
+					Ingenieria en Sistemas de la Información en la Universidad Nacional del Sur. E implemente esta 
+					página web como proyecto de la materia Ingeniería de Aplicaciones Web correspondiente al primer
+					 cuatrimestre de año 2020.					 
+				</p>
+				<p>
+					La aplicación web se implemento utilizando las técnologias HTML, CSS y Javascript, junto con 
+					los frameworks Bootstrap y JQuery para facilitar el desarrollo.
+				</p>
+				<p>
+					La funcionalidad que 
+				</p>
              </div>
         </div>
     </div>
     <!-- Page Content -->
 
+    <div class='spacer'></div>
+		<!-- Footer -->
+		<footer class="page-footer font-small ">
+			<!-- Copyright -->
+			<div class="footer-copyright py-3">
+				© 2020 Copyright:
+				<a href="http://github.com/FelipeFern" id="nombreFooter">
+					Fernandez Felipe</a
+				>
+			</div>
+			<!-- Copyright -->
+		</footer>
+		<!-- Footer -->
 
+		<script src="js/jquery-3.4.1.slim.min.js"></script>
 
+		<script type="text/javascript" src="js/Analizador.js"></script>
+		<script type="text/javascript" src="js/temas.js"></script>
+		<script type="text/javascript" src="js/Almacenamiento.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-                
-        <!-- Footer -->
-        <footer class="page-footer font-small sticky-footer">
-
-            <!-- Copyright -->
-            <div class="footer-copyright text-center py-3">© 2020 Copyright:
-            <a href="http://github.com/FelipeFern"  id="nombreFooter"> Fernandez Felipe</a>
-            </div>
-            <!-- Copyright -->
-        
-        </footer>
-        <!-- Footer -->   
-
-        <script type="text/javascript" src="js/temas.js"></script>
-    </body>
+	</body>
 </html>
+
+
+  
+

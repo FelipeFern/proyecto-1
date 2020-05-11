@@ -1,7 +1,8 @@
-<html>
+<html lang= "es">
 	<head>
 		<!-- CSS -->
 		<link rel="stylesheet" href="Css/index.css" />
+		<link rel="stylesheet" href="Css/Anteriores.css" />
 		<link
 			rel="stylesheet"
 			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -12,44 +13,44 @@
 
 	<body id="Cuerpo">
 		<nav
-			class="navbar navbar-dark bg-title navbar-expand-lg sticky-top"
+			class="navbar navbar-dark bg-title navbar-expand-md sticky-top"
 			id="Encabezado"
 		>
-			<a
-				href="Index.html"
+			<img
 				class="navbar-brand"
-				style="font-size: 24px;"
 				id="Logo"
+				src="Logo/textito.png"				
 			>
-				My Website</a
+				</img
 			>
 
-			<div class="collapse navbar-collapse">
-				<ul class="navbar-nav">
-					<li class="navbar-item">
-						<a href="#" class="nav-link" id="links">Blog</a>
-					</li>
-					<li class="navbar-item">
-						<a href="AboutMe.html" class="nav-link" id="links">About Me</a>
-					</li>
-					<li class="navbar-item">
-						<a href="Contact.html" class="nav-link" id="links">Contact</a>
-					</li>
-					<li class="custom-control custom-switch">
-						<input
-							type="checkbox"
-							class="custom-control-input"
-							id="customSwitch1"
-							onclick="CambiarTema()"
-						/>
-						<label class="custom-control-label" for="customSwitch1">Tema</label>
-					</li>
-				</ul>
-			</div>
+		
+			<ul class="navbar-nav" >
+				<li class="navbar-item">
+					<a href="index.html" class="nav-link" id="links">Home</a>
+				</li>
+				<li class="navbar-item">
+					<a href="AboutMe.html" class="nav-link" id="links">About Me</a>
+				</li>
+				<li class="navbar-item">
+					<a href="Contact.html" class="nav-link" id="links">Anteriores</a>
+				</li>
+				<li>
+					<div class="dropdown">
+						<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown" ><!--aria-haspopup="true" aria-expanded="false" TAMBIEN ESTABA COMO ATRIBUTO PERO NOSE QUE ERAN ASIQUE LO SAQUE.-->
+						  Tema
+						</button>
+						<div class="dropdown-menu" aria-labelledby="dropdownMenu">
+						  <button class="dropdown-item" type="button" onclick="setTheme('tema-secundario')">Claro</button>
+						  <button class="dropdown-item" type="button" onclick="setTheme('tema-primario')" >Oscuro</button>
+						</div>
+					  </div>
+				</li>
+			</ul>
+			
+			
 		</nav>
 
-		<!-- Components-->
-		<!-- Insertar calendario a la derecha.-->
 
 		<!-- Page Content -->
 		<div class="container page-content child">
@@ -58,7 +59,7 @@
 					<h1 class="text-center">Analizar texto</h1>
 
 					<div class="form-group">
-						<h5 id="Algo">Ingrese el texto:</h5>
+						<h5 >Ingrese el texto:</h5>
 						<textarea
 							class="form-control"
 							id="textoIngresado"
@@ -69,16 +70,52 @@
 					<button
 						type="button"
 						class="btn btn-outline-secondary"
-						id="botonAnalizar"
-						onclick="contar(this)"
+						onclick="contar('')"
 					>
 						Analizar
 					</button>
+
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							<h5 >Buscar:</h5>
+							<textarea
+								class="form-control"
+								id="aBuscar"
+								rows="1"
+							></textarea>
+						</div>	
+						<div class="form-group col-md-6">
+							<h5 >Cantidad:</h5>
+							<textarea
+								class="form-control"
+								id="cantidad"
+								rows="1"
+								readonly="readonly"
+							></textarea>
+						</div>						
+					</div>
+					<button
+						type="button"
+						class="btn btn-outline-secondary"
+						onclick="buscarPalabra()"
+					>
+						Buscar
+					</button>
+					<div class="form-group" id ="oraciones">
+						<h5 >Oraciones</h5>
+						<textarea
+							class="form-control"
+							id="respuestas"
+							rows="4"
+							readonly="readonly"
+						></textarea>
+					</div>
 				</div>
+
 				<div class="col-sm-4">
 					<h1 class="text-center">Caracteristicas</h1>
 
-					<div class="form-group" style="margin-top: 40px;">
+					<div class="form-group">
 						<h5 class="caracteristicas">Palabras</h5>
 						<textarea
 							class="form-control"
@@ -141,8 +178,318 @@
 			</div>
 		</div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+		<!--TEXTOS ANTERIORES.-->
+		<h1 class="text-center">Textos Anteriores</h1>
+		<div class="container page-content child">
+			<div class="row child">
+				<div class="col-sm-8">
+					<div class="form-group">
+						<h5 >Texto 1:</h5>
+						<textarea
+							class="form-control"
+							id="textoIngresado1"
+							rows="5"
+						></textarea>
+					</div>
+					<button
+						type="button"
+						class="btn btn-outline-secondary"
+						onclick="reAnalizar('1')"
+					>
+						Analizar Nuevamente
+					</button>
+				</div>
+
+				<div class="col-sm-4">					
+					<div id="etiquetas">
+						<div class="form-group row"  id="caracteristicasAnteriores">
+							<label class="col-md-4 col-form-label">Palabras</label>
+							<div class="col-md-8">
+								<textarea
+									class="form-control"
+									readonly="readonly"
+									rows="1"
+									id="palabras1"
+								></textarea>
+							</div>
+						</div>
+						<div class="form-group row"  id="caracteristicasAnteriores">
+							<label class="col-md-4 col-form-label">Parrafos</label>
+							<div class="col-md-8">
+								<textarea
+									class="form-control"
+									readonly="readonly"
+									rows="1"
+									id="parrafos1"
+								></textarea>
+							</div>
+						</div>
+						<div class="form-group row"  id="caracteristicasAnteriores">
+							<label class="col-md-4 col-form-label">Caracteres</label>
+							<div class="col-md-8">
+								<textarea
+									class="form-control"
+									readonly="readonly"
+									rows="1"
+									id="caracteres1"
+								></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row child">
+				<div class="col-sm-8">
+					<div class="form-group">
+						<h5 >Texto 2:</h5>
+						<textarea
+							class="form-control"
+							id="textoIngresado2"
+							rows="5"
+						></textarea>
+					</div>
+
+					<button
+						type="button"
+						class="btn btn-outline-secondary"
+						onclick="reAnalizar('2')"
+					>
+						Analizar nuevamente
+					</button>
+				</div>
+
+				<div class="col-sm-4">					
+					<div id="etiquetas">
+						<div class="form-group row"  id="caracteristicasAnteriores">
+							<label class="col-md-4 col-form-label">Palabras</label>
+							<div class="col-md-8">
+								<textarea
+									class="form-control"
+									readonly="readonly"
+									rows="1"
+									id="palabras2"
+								></textarea>
+							</div>
+						</div>
+						<div class="form-group row"  id="caracteristicasAnteriores">
+							<label class="col-md-4 col-form-label">Parrafos</label>
+							<div class="col-md-8">
+								<textarea
+									class="form-control"
+									readonly="readonly"
+									rows="1"
+									id="parrafos2"
+								></textarea>
+							</div>
+						</div>
+						<div class="form-group row"  id="caracteristicasAnteriores">
+							<label class="col-md-4 col-form-label">Caracteres</label>
+							<div class="col-md-8">
+								<textarea
+									class="form-control"
+									readonly="readonly"
+									rows="1"
+									id="caracteres2"
+								></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row child">
+				<div class="col-sm-8">
+					<div class="form-group">
+						<h5 >Texto 3:</h5>
+						<textarea
+							class="form-control"
+							id="textoIngresado3"
+							rows="5"
+						></textarea>
+					</div>
+
+					<button
+						type="button"
+						class="btn btn-outline-secondary"
+						onclick="reAnalizar('3')"
+					>
+						Analizar nuevamente
+					</button>
+				</div>
+
+				<div class="col-sm-4">					
+					<div id="etiquetas">
+						<div class="form-group row"  id="caracteristicasAnteriores">
+							<label class="col-md-4 col-form-label">Palabras</label>
+							<div class="col-md-8">
+								<textarea
+									class="form-control"
+									readonly="readonly"
+									rows="1"
+									id="palabras3"
+								></textarea>
+							</div>
+						</div>
+						<div class="form-group row"  id="caracteristicasAnteriores">
+							<label class="col-md-4 col-form-label">Parrafos</label>
+							<div class="col-md-8">
+								<textarea
+									class="form-control"
+									readonly="readonly"
+									rows="1"
+									id="parrafos3"
+								></textarea>
+							</div>
+						</div>
+						<div class="form-group row"  id="caracteristicasAnteriores">
+							<label class="col-md-4 col-form-label">Caracteres</label>
+							<div class="col-md-8">
+								<textarea
+									class="form-control"
+									readonly="readonly"
+									rows="1"
+									id="caracteres3"
+								></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row child">
+				<div class="col-sm-8">
+					<div class="form-group">
+						<h5 >Texto 4:</h5>
+						<textarea
+							class="form-control"
+							id="textoIngresado4"
+							rows="5"
+						></textarea>
+					</div>
+
+					<button
+						type="button"
+						class="btn btn-outline-secondary"
+						onclick="reAnalizar('4')"
+					>
+						Analizar nuevamente
+					</button>
+				</div>
+
+				<div class="col-sm-4">					
+					<div id="etiquetas">
+						<div class="form-group row"  id="caracteristicasAnteriores">
+							<label class="col-md-4 col-form-label">Palabras</label>
+							<div class="col-md-8">
+								<textarea
+									class="form-control"
+									readonly="readonly"
+									rows="1"
+									id="palabras4"
+								></textarea>
+							</div>
+						</div>
+						<div class="form-group row"  id="caracteristicasAnteriores">
+							<label class="col-md-4 col-form-label">Parrafos</label>
+							<div class="col-md-8">
+								<textarea
+									class="form-control"
+									readonly="readonly"
+									rows="1"
+									id="parrafos4"
+								></textarea>
+							</div>
+						</div>
+						<div class="form-group row"  id="caracteristicasAnteriores">
+							<label class="col-md-4 col-form-label">Caracteres</label>
+							<div class="col-md-8">
+								<textarea
+									class="form-control"
+									readonly="readonly"
+									rows="1"
+									id="caracteres4"
+								></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row child">
+				<div class="col-sm-8">
+					<div class="form-group">
+						<h5 >Texto 5:</h5>
+						<textarea
+							class="form-control"
+							id="textoIngresado0"
+							rows="5"
+						></textarea>
+					</div>
+
+					<button
+						type="button"
+						class="btn btn-outline-secondary"
+						onclick="reAnalizar('5')"
+					>
+						Analizar nuevamente
+					</button>
+				</div>
+
+				<div class="col-sm-4">					
+					<div id="etiquetas">
+						<div class="form-group row"  id="caracteristicasAnteriores">
+							<label class="col-md-4 col-form-label">Palabras</label>
+							<div class="col-md-8">
+								<textarea
+									class="form-control"
+									readonly="readonly"
+									rows="1"
+									id="palabras0"
+								></textarea>
+							</div>
+						</div>
+						<div class="form-group row"  id="caracteristicasAnteriores">
+							<label class="col-md-4 col-form-label">Parrafos</label>
+							<div class="col-md-8">
+								<textarea
+									class="form-control"
+									readonly="readonly"
+									rows="1"
+									id="parrafos0"
+								></textarea>
+							</div>
+						</div>
+						<div class="form-group row"  id="caracteristicasAnteriores">
+							<label class="col-md-4 col-form-label">Caracteres</label>
+							<div class="col-md-8">
+								<textarea
+									class="form-control"
+									readonly="readonly"
+									rows="1"
+									id="caracteres0"
+								></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
 		<!-- Footer -->
-		<footer class="page-footer font-small sticky-footer">
+		<footer class="page-footer font-small ">
 			<!-- Copyright -->
 			<div class="footer-copyright py-3">
 				© 2020 Copyright:
@@ -156,7 +503,11 @@
 
 		<script src="js/jquery-3.4.1.slim.min.js"></script>
 
-		<script type="text/javascript" src="js/Text.js"></script>
+		<script type="text/javascript" src="js/Analizador.js"></script>
 		<script type="text/javascript" src="js/temas.js"></script>
+		<script type="text/javascript" src="js/Almacenamiento.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 	</body>
 </html>
