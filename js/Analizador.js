@@ -112,7 +112,7 @@ function presentar(apariciones, texto, largo) {
 	var i = 0;
 	var n = 25;
 	while (i <= apariciones.length - 1) {
-		modificado += "Aparicion " + i + ": ";
+		modificado += "Aparicion " + (i + 1) + ": ";
 		if (apariciones[i] - n > 0) modificado += "...";
 		modificado += texto.substring(
 			apariciones[i] - n,
