@@ -81,4 +81,5 @@ Y por último vamos a guardar los últimos 5 textos analizados junto con sus dat
 y con la opción de analizar nuevamente y poder consultar sobre sus vocales, consonantes y tildes, 
 y buscar subtextos en el texto. Estos textos van a ser mostrados al cargar la página y se van a ir
 actualizando al ir analizando nuevos textos, mostrandose desde el más reciente analizado al menos.
->>>>>>> b66dfcb7e6b1578e86ed92ac1442e5f3bd59442d
+
+El link a la pagina es https://felipefern.github.io/proyecto-1/index.html
