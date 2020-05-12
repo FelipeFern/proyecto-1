@@ -4,6 +4,7 @@
 
 ## **Introducción**
 
+<<<<<<< HEAD
 El proyecto consiste en la implementación de una aplicación web utilizando las tencnologías HTML, CSS y Javascript. Se permite la utilización de librerías Javascript Open Source, siempre y cuando se otorguen los créditos correspondientes a el o los autores, incluyendo links a las fuentes originales. También es posible la utilización de frameworks de CSS (como por ejemplo Bootstrap). **No** se permite el uso de frameworks JS (AngularJS, React, VueJS).
 
 El proyecto es individual y se debe elegir uno de los 3 temas mencionados a continuación. Es recomendable, una vez elegido el tema y la aplicación concreta a implementar, consultar con la cátedra para asegurarse que permita cumplir los requisitos mínimos requeridos y a su vez no exceda la complejidad del mismo.
@@ -58,3 +59,26 @@ La corrección del mismo será a través de los comentarios que permite realizar
 
 - Approved: Aprobado :D
 - Request Changes: Re-entrega, se explicará en el mensaje, qué es lo que hay que corregir.
+=======
+La implementación de esta página web corresponde como proyecto de la materia Ingeniería de Aplicaciones Web correspondiente al primer
+cuatrimestre de año 2020.					 
+
+La aplicación web se implemento utilizando las técnologias HTML, CSS y Javascript, junto con 
+los frameworks Bootstrap y JQuery para facilitar el desarrollo.
+
+Esta permite analizar un texto ingresado contando la cantidad de palabras, párrafos, caracteres, vocales, 
+consonantes y tildes del mismo. También permite buscar una frase, palabra o letra y contar la cantidad de 
+apariciones de estas en el texto, y luego mostrar abajo las frases que contienen esos datos, 
+mostrando los 25 caracteres anteriores y posteriores si es que existen.
+
+Vamos a permitir que se cambien el tema o estilo general de la página con dos opciones, uno claro 
+y otra oscuro y se va a guardar la opción elegida en el navegador al cerrar la página. 
+Esto quiere decir que al volverla a abrir en cualquier otro momento va a estar asignado el tema 
+que había sido elegido anteriormente.
+
+Y por último vamos a guardar los últimos 5 textos analizados junto con sus datos principales 
+(palabas, párrafos y caracteres), que se van a mostrar al final de la página con los datos almacenados 
+y con la opción de analizar nuevamente y poder consultar sobre sus vocales, consonantes y tildes, 
+y buscar subtextos en el texto. Estos textos van a ser mostrados al cargar la página y se van a ir
+actualizando al ir analizando nuevos textos, mostrandose desde el más reciente analizado al menos.
+>>>>>>> b66dfcb7e6b1578e86ed92ac1442e5f3bd59442d
