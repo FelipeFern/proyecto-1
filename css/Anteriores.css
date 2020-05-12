@@ -1,9 +1,10 @@
 #caracteristicasAnteriores {
-	padding: 6px;
+	padding: 4px;
 	margin: 0px;
 }
+
 #etiquetas {
-	margin-top: 60px;
+	margin-top: 50px;
 }
 
 .col-md-4 {
@@ -16,4 +17,16 @@
 	background-color: var(--fondo-textareas);
 	color: var(--fuente-textareas);
 	border: none;
+}
+
+h1,
+#TextosAnteriores {
+	align-self: center;
+	margin: 50px;
+	text-decoration: underline;
+	color: var(--fuente);
+}
+
+#UltimoBoton {
+	margin-bottom: 50px;
 }

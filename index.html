@@ -27,17 +27,15 @@
 		
 			<ul class="navbar-nav" >
 				<li class="navbar-item">
-					<a href="index.html" class="nav-link" id="links">Home</a>
+					<a href="index.html" class="nav-link" >Inicio</a>
 				</li>
 				<li class="navbar-item">
-					<a href="AboutMe.html" class="nav-link" id="links">About Me</a>
+					<a href="Textito.html" class="nav-link" >Textito</a>
 				</li>
-				<li class="navbar-item">
-					<a href="Contact.html" class="nav-link" id="links">Anteriores</a>
-				</li>
+				
 				<li>
 					<div class="dropdown">
-						<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown" ><!--aria-haspopup="true" aria-expanded="false" TAMBIEN ESTABA COMO ATRIBUTO PERO NOSE QUE ERAN ASIQUE LO SAQUE.-->
+						<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown" >
 						  Tema
 						</button>
 						<div class="dropdown-menu" aria-labelledby="dropdownMenu">
@@ -180,18 +178,8 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
 		<!--TEXTOS ANTERIORES.-->
-		<h1 class="text-center">Textos Anteriores</h1>
+		<h1 class="text-center" id="TextosAnteriores">Textos Anteriores</h1>
 		<div class="container page-content child">
 			<div class="row child">
 				<div class="col-sm-8">
@@ -201,6 +189,7 @@
 							class="form-control"
 							id="textoIngresado1"
 							rows="5"
+							readonly="readonly"
 						></textarea>
 					</div>
 					<button
@@ -260,6 +249,7 @@
 							class="form-control"
 							id="textoIngresado2"
 							rows="5"
+							readonly="readonly"
 						></textarea>
 					</div>
 
@@ -318,6 +308,7 @@
 							class="form-control"
 							id="textoIngresado3"
 							rows="5"
+							readonly="readonly"
 						></textarea>
 					</div>
 
@@ -376,6 +367,7 @@
 							class="form-control"
 							id="textoIngresado4"
 							rows="5"
+							readonly="readonly"
 						></textarea>
 					</div>
 
@@ -434,13 +426,15 @@
 							class="form-control"
 							id="textoIngresado0"
 							rows="5"
+							readonly="readonly"
 						></textarea>
 					</div>
 
 					<button
 						type="button"
 						class="btn btn-outline-secondary"
-						onclick="reAnalizar('5')"
+						onclick="reAnalizar('0')"
+						id="UltimoBoton"
 					>
 						Analizar nuevamente
 					</button>

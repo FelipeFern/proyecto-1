@@ -16,12 +16,12 @@ function contar() {
 		contarConsonanteCaracter(c);
 		contarPalabras(c, texto.charCodeAt(i - 1));
 	}
-	if (c != "32" && c != "10") palabra++;
+	if (c != "32" && c != "10" && texto.length > 0) palabra++;
 
 	contarParrafos(texto);
 
 	mostrarResultados();
-	guardarDatos(texto, palabra, parrafo, caracter, vocal, consonante, tilde);
+	guardarDatos(texto, palabra, parrafo, caracter);
 	reiniciarVariables();
 }
 
@@ -103,17 +103,21 @@ function buscarPalabra() {
 		});
 
 		resultado.val(indexesOf(palabra).in(texto).length);
-		presentar(indexesOf(palabra).in(texto), texto, palabra);
+		presentar(indexesOf(palabra).in(texto), texto, palabra.length);
 	}
 }
 
-function presentar(apariciones, texto) {
+function presentar(apariciones, texto, largo) {
 	var modificado = "";
 	var i = 0;
 	var n = 25;
 	while (i <= apariciones.length - 1) {
+		modificado += "Aparicion " + i + ": ";
 		if (apariciones[i] - n > 0) modificado += "...";
-		modificado += texto.substring(apariciones[i] - n, apariciones[i] + n);
+		modificado += texto.substring(
+			apariciones[i] - n,
+			apariciones[i] + n + largo
+		);
 		if (apariciones[i] + n < texto.length) modificado += "..." + "\n";
 		else modificado += "\n";
 		i++;

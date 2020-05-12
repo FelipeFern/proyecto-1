@@ -10,15 +10,16 @@ html {
 	background-color: var(--fondo);
 }
 
+.navbar .navbar-brand,
 #Encabezado,
-#Logo,
-#links,
+.navbar .navbar-nav .navbar-item .nav-link,
 .custom-control {
 	color: var(--fuente-navbar);
 	background-color: var(--fondo-navbar);
 	font-size: 25px;
 	padding: 10px;
 	align-self: center;
+	font-weight: 600;
 }
 
 #Logo {
@@ -34,9 +35,10 @@ html {
 	align-self: center;
 	background-color: var(--fondo-navbar);
 	border: 0px;
-	font-size: 25;
+	font-size: 25px;
 	padding: 10px;
 	color: var(--fuente-navbar);
+	font-weight: 600;
 }
 
 .dropdown-menu {
@@ -44,16 +46,8 @@ html {
 	color: var(--fuente-navbar) !important;
 }
 
-textarea {
-	background-color: var(--fondo-navbar);
-}
-
 .container {
 	margin-top: 40px;
-}
-
-h1 {
-	color: var(--fuente);
 }
 
 h5 {
@@ -62,16 +56,8 @@ h5 {
 	text-align: left;
 }
 
-#palabras,
-#vocales,
-#parrafos,
-#consonantes,
-#caracteres,
-#tildes,
-#textoIngresado,
-#aBuscar,
-#cantidad,
-#respuestas {
+.col-sm-4 .form-group .form-control,
+.col-sm-8 .form-group .form-control {
 	resize: none;
 	background-color: var(--fondo-textareas);
 	color: var(--fuente-textareas);
@@ -87,6 +73,15 @@ h5 {
 	margin-top: 30px;
 }
 
+p {
+	color: var(--fuente);
+	font-size: 20px;
+	margin: 40px;
+}
+
+#parrafosTextito {
+	margin: 50px;
+}
 /* Aca esta todo lo del footer*/
 .page-footer {
 	background-color: var(--fondo-navbar);
@@ -123,9 +118,9 @@ div {
 
 .tema-secundario {
 	--fondo: #cacabe;
-	--fuente: #39253b;
+	--fuente: #352736;
 	--fondo-navbar: #6c8a80;
-	--fuente-navbar: black;
+	--fuente-navbar: rgb(48, 46, 46);
 	--fondo-textareas: #e3e9e5;
 	--fuente-textareas: rgb(36, 36, 13);
 }

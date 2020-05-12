@@ -2,23 +2,12 @@ $(document).ready(function () {
 	mostrarDatosAnteriores();
 });
 
-function guardarDatos(
-	texto,
-	palabra,
-	parrafo,
-	caracter,
-	vocal,
-	consonante,
-	tilde
-) {
+function guardarDatos(texto, palabra, parrafo, caracter) {
 	var objeto = {
 		tex: texto,
 		pal: palabra,
 		parr: parrafo,
 		car: caracter,
-		voc: vocal,
-		cons: consonante,
-		tildes: tilde,
 	};
 	var aGuardar = JSON.stringify(objeto);
 
@@ -48,7 +37,6 @@ function popDatos(n, i) {
 
 	var json = localStorage.getItem("texto" + i);
 	if (json != null) {
-		alert("pude encontrar los datos");
 		var obj = JSON.parse(json);
 
 		t.val(obj.tex);
