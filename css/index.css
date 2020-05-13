@@ -1,0 +1,126 @@
+html {
+	height: 100%;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#Cuerpo {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	padding: 0;
+	margin: 0;
+	background-color: var(--fondo);
+}
+
+.navbar .navbar-brand,
+#Encabezado,
+.navbar .navbar-nav .navbar-item .nav-link,
+.custom-control {
+	color: var(--fuente-navbar);
+	background-color: var(--fondo-navbar);
+	font-size: 25px;
+	padding: 10px;
+	align-self: center;
+	font-weight: 600;
+}
+
+#Logo {
+	height: 60px;
+	width: 250px;
+}
+
+.navbar-nav {
+	margin-left: auto;
+}
+
+#dropdownMenu {
+	align-self: center;
+	background-color: var(--fondo-navbar);
+	border: 0px;
+	font-size: 25px;
+	padding: 10px;
+	color: var(--fuente-navbar);
+	font-weight: 600;
+}
+
+.dropdown-menu {
+	background-color: var(--fondo-navbar) !important;
+	color: var(--fuente-navbar) !important;
+}
+
+.container {
+	margin-top: 40px;
+}
+
+h5 {
+	margin: 10px;
+	color: var(--fuente);
+	text-align: left;
+}
+
+.col-sm-4 .form-group .form-control,
+.col-sm-8 .form-group .form-control {
+	resize: none;
+	background-color: var(--fondo-textareas);
+	color: var(--fuente-textareas);
+	margin: 10px;
+	border: none;
+}
+
+#oraciones {
+	margin-top: 15px !important;
+}
+
+.form-group {
+	margin-top: 30px;
+}
+
+p {
+	color: var(--fuente);
+	font-size: 20px;
+	margin: 40px;
+}
+
+#parrafosTextito {
+	margin: 50px;
+}
+/* Aca esta todo lo del footer*/
+.page-footer {
+	background-color: var(--fondo-navbar);
+	color: var(--fuente-navbar);
+	width: 100%;
+	clear: both;
+	display: flex;
+	text-align: center;
+	bottom: 0;
+	position: relative;
+}
+
+#nombreFooter {
+	color: var(--fuente-navbar);
+	text-decoration-line: underline;
+}
+
+div {
+	flex: 1;
+}
+
+.spacer {
+	flex: 1;
+}
+/* Todo lo relacionado con los diferentes temas. */
+.tema-primario {
+	--fondo: #434646;
+	--fuente: #8f8c83;
+	--fondo-navbar: #6e7047;
+	--fuente-navbar: #080808;
+	--fondo-textareas: rgb(157, 161, 157);
+	--fuente-textareas: rgb(36, 36, 13);
+}
+
+.tema-secundario {
+	--fondo: #cacabe;
+	--fuente: #352736;
+	--fondo-navbar: #6c8a80;
+	--fuente-navbar: rgb(48, 46, 46);
+	--fondo-textareas: #e3e9e5;
+	--fuente-textareas: rgb(36, 36, 13);
+}

@@ -1,18 +1,507 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<html lang= "es">
+	<head>
+		<!-- CSS -->
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/Anteriores.css" />
+		
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		/>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/app.css">
+		<title>Textito</title>
+	</head>
 
-    <title>Proyecto 1</title>
-  </head>
-  <body>
-    <h1>Proyecto 1</h1>
+	<body id="Cuerpo">
+		<nav
+			class="navbar navbar-dark bg-title navbar-expand-md sticky-top"
+			id="Encabezado"
+		>
 
-    <!-- JavaScript -->
-    <script src="js/app.js"></script>
-  </body>
+			<img
+				class="navbar-brand"
+				id="Logo"
+				src="Logo/textito.png"				
+			>
+				</img
+			>
+
+		
+			<ul class="navbar-nav" >
+				<li class="navbar-item">
+					<a href="index.html" class="nav-link" >Inicio</a>
+				</li>
+				<li class="navbar-item">
+					<a href="Textito.html" class="nav-link" >Textito</a>
+				</li>
+				
+				<li>
+					<div class="dropdown">
+						<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown" >
+						  Tema
+						</button>
+						<div class="dropdown-menu" aria-labelledby="dropdownMenu">
+						  <button class="dropdown-item" type="button" onclick="setTheme('tema-secundario')">Claro</button>
+						  <button class="dropdown-item" type="button" onclick="setTheme('tema-primario')" >Oscuro</button>
+						</div>
+					  </div>
+				</li>
+			</ul>
+			
+			
+		</nav>
+
+
+		<!-- Page Content -->
+		<div class="container page-content child">
+			<div class="row child">
+				<div class="col-sm-8">
+					<h1 class="text-center">Analizar texto</h1>
+
+					<div class="form-group">
+						<h5 >Ingrese el texto:</h5>
+						<textarea
+							class="form-control"
+							id="textoIngresado"
+							rows="5"
+						></textarea>
+					</div>
+
+					<button
+						type="button"
+						class="btn btn-outline-secondary"
+						onclick="contar('')"
+					>
+						Analizar
+					</button>
+
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							<h5 >Buscar:</h5>
+							<textarea
+								class="form-control"
+								id="aBuscar"
+								rows="1"
+							></textarea>
+						</div>	
+						<div class="form-group col-md-6">
+							<h5 >Cantidad:</h5>
+							<textarea
+								class="form-control"
+								id="cantidad"
+								rows="1"
+								readonly="readonly"
+							></textarea>
+						</div>						
+					</div>
+					<button
+						type="button"
+						class="btn btn-outline-secondary"
+						onclick="buscarPalabra()"
+					>
+						Buscar
+					</button>
+					<div class="form-group" id ="oraciones">
+						<h5 >Oraciones</h5>
+						<textarea
+							class="form-control"
+							id="respuestas"
+							rows="4"
+							readonly="readonly"
+						></textarea>
+					</div>
+				</div>
+
+				<div class="col-sm-4">
+					<h1 class="text-center">Caracteristicas</h1>
+
+					<div class="form-group">
+						<h5 class="caracteristicas">Palabras</h5>
+						<textarea
+							class="form-control"
+							readonly="readonly"
+							rows="1"
+							id="palabras"
+						></textarea>
+					</div>
+
+					<div class="form-group">
+						<h5 class="caracteristicas">Párrafos</h5>
+						<textarea
+							class="form-control"
+							readonly="readonly"
+							rows="1"
+							id="parrafos"
+						></textarea>
+					</div>
+
+					<div class="form-group">
+						<h5 class="caracteristicas">Caracteres</h5>
+						<textarea
+							class="form-control"
+							readonly="readonly"
+							rows="1"
+							id="caracteres"
+						></textarea>
+					</div>
+
+					<div class="form-group">
+						<h5 class="caracteristicas">Vocales</h5>
+						<textarea
+							class="form-control"
+							readonly="readonly"
+							rows="1"
+							id="vocales"
+						></textarea>
+					</div>
+
+					<div class="form-group">
+						<h5 class="caracteristicas">Consonantes</h5>
+						<textarea
+							class="form-control"
+							readonly="readonly"
+							rows="1"
+							id="consonantes"
+						></textarea>
+					</div>
+
+					<div class="form-group">
+						<h5 class="caracteristicas">Tildes</h5>
+						<textarea
+							class="form-control"
+							readonly="readonly"
+							rows="1"
+							id="tildes"
+						></textarea>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<!--TEXTOS ANTERIORES.-->
+		<h1 class="text-center" id="TextosAnteriores">Textos Anteriores</h1>
+		<div class="container page-content child">
+			<div class="row child">
+				<div class="col-sm-8">
+					<div class="form-group">
+						<h5 >Texto 1:</h5>
+						<textarea
+							class="form-control"
+							id="textoIngresado1"
+							rows="5"
+							readonly="readonly"
+						></textarea>
+					</div>
+					<button
+						type="button"
+						class="btn btn-outline-secondary"
+						onclick="reAnalizar('1')"
+					>
+						Analizar Nuevamente
+					</button>
+				</div>
+
+				<div class="col-sm-4">					
+					<div id="etiquetas">
+						<div class="form-group row"  id="caracteristicasAnteriores">
+							<label class="col-md-4 col-form-label">Palabras</label>
+							<div class="col-md-8">
+								<textarea
+									class="form-control"
+									readonly="readonly"
+									rows="1"
+									id="palabras1"
+								></textarea>
+							</div>
+						</div>
+						<div class="form-group row"  id="caracteristicasAnteriores">
+							<label class="col-md-4 col-form-label">Parrafos</label>
+							<div class="col-md-8">
+								<textarea
+									class="form-control"
+									readonly="readonly"
+									rows="1"
+									id="parrafos1"
+								></textarea>
+							</div>
+						</div>
+						<div class="form-group row"  id="caracteristicasAnteriores">
+							<label class="col-md-4 col-form-label">Caracteres</label>
+							<div class="col-md-8">
+								<textarea
+									class="form-control"
+									readonly="readonly"
+									rows="1"
+									id="caracteres1"
+								></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row child">
+				<div class="col-sm-8">
+					<div class="form-group">
+						<h5 >Texto 2:</h5>
+						<textarea
+							class="form-control"
+							id="textoIngresado2"
+							rows="5"
+							readonly="readonly"
+						></textarea>
+					</div>
+
+					<button
+						type="button"
+						class="btn btn-outline-secondary"
+						onclick="reAnalizar('2')"
+					>
+						Analizar nuevamente
+					</button>
+				</div>
+
+				<div class="col-sm-4">					
+					<div id="etiquetas">
+						<div class="form-group row"  id="caracteristicasAnteriores">
+							<label class="col-md-4 col-form-label">Palabras</label>
+							<div class="col-md-8">
+								<textarea
+									class="form-control"
+									readonly="readonly"
+									rows="1"
+									id="palabras2"
+								></textarea>
+							</div>
+						</div>
+						<div class="form-group row"  id="caracteristicasAnteriores">
+							<label class="col-md-4 col-form-label">Parrafos</label>
+							<div class="col-md-8">
+								<textarea
+									class="form-control"
+									readonly="readonly"
+									rows="1"
+									id="parrafos2"
+								></textarea>
+							</div>
+						</div>
+						<div class="form-group row"  id="caracteristicasAnteriores">
+							<label class="col-md-4 col-form-label">Caracteres</label>
+							<div class="col-md-8">
+								<textarea
+									class="form-control"
+									readonly="readonly"
+									rows="1"
+									id="caracteres2"
+								></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row child">
+				<div class="col-sm-8">
+					<div class="form-group">
+						<h5 >Texto 3:</h5>
+						<textarea
+							class="form-control"
+							id="textoIngresado3"
+							rows="5"
+							readonly="readonly"
+						></textarea>
+					</div>
+
+					<button
+						type="button"
+						class="btn btn-outline-secondary"
+						onclick="reAnalizar('3')"
+					>
+						Analizar nuevamente
+					</button>
+				</div>
+
+				<div class="col-sm-4">					
+					<div id="etiquetas">
+						<div class="form-group row"  id="caracteristicasAnteriores">
+							<label class="col-md-4 col-form-label">Palabras</label>
+							<div class="col-md-8">
+								<textarea
+									class="form-control"
+									readonly="readonly"
+									rows="1"
+									id="palabras3"
+								></textarea>
+							</div>
+						</div>
+						<div class="form-group row"  id="caracteristicasAnteriores">
+							<label class="col-md-4 col-form-label">Parrafos</label>
+							<div class="col-md-8">
+								<textarea
+									class="form-control"
+									readonly="readonly"
+									rows="1"
+									id="parrafos3"
+								></textarea>
+							</div>
+						</div>
+						<div class="form-group row"  id="caracteristicasAnteriores">
+							<label class="col-md-4 col-form-label">Caracteres</label>
+							<div class="col-md-8">
+								<textarea
+									class="form-control"
+									readonly="readonly"
+									rows="1"
+									id="caracteres3"
+								></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row child">
+				<div class="col-sm-8">
+					<div class="form-group">
+						<h5 >Texto 4:</h5>
+						<textarea
+							class="form-control"
+							id="textoIngresado4"
+							rows="5"
+							readonly="readonly"
+						></textarea>
+					</div>
+
+					<button
+						type="button"
+						class="btn btn-outline-secondary"
+						onclick="reAnalizar('4')"
+					>
+						Analizar nuevamente
+					</button>
+				</div>
+
+				<div class="col-sm-4">					
+					<div id="etiquetas">
+						<div class="form-group row"  id="caracteristicasAnteriores">
+							<label class="col-md-4 col-form-label">Palabras</label>
+							<div class="col-md-8">
+								<textarea
+									class="form-control"
+									readonly="readonly"
+									rows="1"
+									id="palabras4"
+								></textarea>
+							</div>
+						</div>
+						<div class="form-group row"  id="caracteristicasAnteriores">
+							<label class="col-md-4 col-form-label">Parrafos</label>
+							<div class="col-md-8">
+								<textarea
+									class="form-control"
+									readonly="readonly"
+									rows="1"
+									id="parrafos4"
+								></textarea>
+							</div>
+						</div>
+						<div class="form-group row"  id="caracteristicasAnteriores">
+							<label class="col-md-4 col-form-label">Caracteres</label>
+							<div class="col-md-8">
+								<textarea
+									class="form-control"
+									readonly="readonly"
+									rows="1"
+									id="caracteres4"
+								></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row child">
+				<div class="col-sm-8">
+					<div class="form-group">
+						<h5 >Texto 5:</h5>
+						<textarea
+							class="form-control"
+							id="textoIngresado0"
+							rows="5"
+							readonly="readonly"
+						></textarea>
+					</div>
+
+					<button
+						type="button"
+						class="btn btn-outline-secondary"
+						onclick="reAnalizar('0')"
+						id="UltimoBoton"
+					>
+						Analizar nuevamente
+					</button>
+				</div>
+
+				<div class="col-sm-4">					
+					<div id="etiquetas">
+						<div class="form-group row"  id="caracteristicasAnteriores">
+							<label class="col-md-4 col-form-label">Palabras</label>
+							<div class="col-md-8">
+								<textarea
+									class="form-control"
+									readonly="readonly"
+									rows="1"
+									id="palabras0"
+								></textarea>
+							</div>
+						</div>
+						<div class="form-group row"  id="caracteristicasAnteriores">
+							<label class="col-md-4 col-form-label">Parrafos</label>
+							<div class="col-md-8">
+								<textarea
+									class="form-control"
+									readonly="readonly"
+									rows="1"
+									id="parrafos0"
+								></textarea>
+							</div>
+						</div>
+						<div class="form-group row"  id="caracteristicasAnteriores">
+							<label class="col-md-4 col-form-label">Caracteres</label>
+							<div class="col-md-8">
+								<textarea
+									class="form-control"
+									readonly="readonly"
+									rows="1"
+									id="caracteres0"
+								></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<!-- Footer -->
+		<footer class="page-footer font-small ">
+			<div class="footer-copyright py-3">
+				© 2020 Copyright:
+				<a href="http://github.com/FelipeFern" id="nombreFooter">
+					Fernandez Felipe
+					</a>
+			</div>
+		</footer>
+		<!-- Footer -->
+
+		<script src="js/jquery-3.4.1.slim.min.js"></script>
+
+		<script type="text/javascript" src="js/Analizador.js"></script>
+		<script type="text/javascript" src="js/temas.js"></script>
+		<script type="text/javascript" src="js/Almacenamiento.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	</body>
 </html>

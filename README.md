@@ -1,13 +1,13 @@
-# Proyecto 1:  HTML - CSS - Javascript - DOM
+# Proyecto 1: HTML - CSS - Javascript - DOM
 
 **Fecha de entrega:** 14 de Mayo de 2020 (inclusive).
 
 ## **Introducción**
 
+<<<<<<< HEAD
 El proyecto consiste en la implementación de una aplicación web utilizando las tencnologías HTML, CSS y Javascript. Se permite la utilización de librerías Javascript Open Source, siempre y cuando se otorguen los créditos correspondientes a el o los autores, incluyendo links a las fuentes originales. También es posible la utilización de frameworks de CSS (como por ejemplo Bootstrap). **No** se permite el uso de frameworks JS (AngularJS, React, VueJS).
 
-El proyecto es individual y se debe elegir uno de los 3 temas mencionados a continuación. Es recomendable, una vez elegido el tema y la aplicación concreta a implementar, consultar con la cátedra para asegurarse que permita cumplir los requisitos mínimos requeridos y a su vez no exceda la complejidad del mismo. 
-
+El proyecto es individual y se debe elegir uno de los 3 temas mencionados a continuación. Es recomendable, una vez elegido el tema y la aplicación concreta a implementar, consultar con la cátedra para asegurarse que permita cumplir los requisitos mínimos requeridos y a su vez no exceda la complejidad del mismo.
 
 ## **Descripción Tema 1 - Utilidad Online**
 
@@ -15,22 +15,18 @@ El proyecto consiste en la implementación de una aplicación web que represen
 
 Ejemplos posibles son aplicaciones que permitan:
 
+- Determinar cuán segura es una password ([http://www.passwordmeter.com/](http://www.passwordmeter.com/))
+- Determinar si una expresión regular es válida y además permita testear diferentes cadenas ([https://regex101.com/r/NXlPe8/1](https://regex101.com/r/NXlPe8/1)).
 
-
-*   Determinar cuán segura es una password ([http://www.passwordmeter.com/](http://www.passwordmeter.com/))
-*   Determinar si una expresión regular es válida y además permita testear diferentes cadenas ([https://regex101.com/r/NXlPe8/1](https://regex101.com/r/NXlPe8/1)).
-
-Estos son sólo ejemplos como para ilustrar posibles herramientas a implementar. Se pueden usar estos mismos ejemplos, u otras herramientas que sigan esta misma línea. Se debe consultar con la cátedra la utilidad que se desea implementar, para evitar opciones muy complejas y que excedan los objetivos de este primer proyecto.  Los requisitos mínimos son que el usuario pueda ingresar información en un campo de texto y exista un algoritmo que se ejecute sobre dicha entrada y permita visualizar algún resultado de manera interactiva. Además, se debe registrar y mostrar, al menos los últimos 5 valores ingresados en el campo de texto (información almacenada en el navegador del usuario).
-
+Estos son sólo ejemplos como para ilustrar posibles herramientas a implementar. Se pueden usar estos mismos ejemplos, u otras herramientas que sigan esta misma línea. Se debe consultar con la cátedra la utilidad que se desea implementar, para evitar opciones muy complejas y que excedan los objetivos de este primer proyecto. Los requisitos mínimos son que el usuario pueda ingresar información en un campo de texto y exista un algoritmo que se ejecute sobre dicha entrada y permita visualizar algún resultado de manera interactiva. Además, se debe registrar y mostrar, al menos los últimos 5 valores ingresados en el campo de texto (información almacenada en el navegador del usuario).
 
 ## **Descripción Tema 2 - Juego Online**
 
-El proyecto consiste en la implementación de una juego online. La idea es que sea algún juego sencillo, preferentemente individual, que desafíe al usuario a realizar una tarea obteniendo un resultado o puntuación, y permita compartir el resultado con amigos. 
+El proyecto consiste en la implementación de una juego online. La idea es que sea algún juego sencillo, preferentemente individual, que desafíe al usuario a realizar una tarea obteniendo un resultado o puntuación, y permita compartir el resultado con amigos.
 
-Un posible ejemplo sería un juego en el cual el participante deba eliminar los números del 1 al 50 tocando la pantalla en la “secuencia correcta” (del 1 al 50), como se puede ver [aquí](http://zzzscore.com/1to50/en/). Cualquier variante de este juego (no exactamente el mismo), o preferentemente algún otro juego, está permitido. 
+Un posible ejemplo sería un juego en el cual el participante deba eliminar los números del 1 al 50 tocando la pantalla en la “secuencia correcta” (del 1 al 50), como se puede ver [aquí](http://zzzscore.com/1to50/en/). Cualquier variante de este juego (no exactamente el mismo), o preferentemente algún otro juego, está permitido.
 
-Se debe consultar con la cátedra el juego que se desea implementar, para evitar opciones muy complejas y que excedan los objetivos de este primer proyecto.  Los requisitos mínimos son que exista cierto tipo de interacción sencilla del usuario que provoque modificaciones inmediatas en la página y  que en algún punto se llegue a un resultado o puntuación.
-
+Se debe consultar con la cátedra el juego que se desea implementar, para evitar opciones muy complejas y que excedan los objetivos de este primer proyecto. Los requisitos mínimos son que exista cierto tipo de interacción sencilla del usuario que provoque modificaciones inmediatas en la página y que en algún punto se llegue a un resultado o puntuación.
 
 ## **Descripción Tema 3 - Covid-19**
 
@@ -38,32 +34,56 @@ El proyecto consiste en la implementación de una aplicación web que permita 
 
 Se debe utilizar como mínimo información con 2 variables distintas, que permitan al usuario modificarlas y ver cómo se actualizan las tablas, gráficos, y/o mapas. Por ejemplo, se podría tener los datos de la cantidad de casos confirmados, para los últimos 15 días, en al menos 3 países (o ciudades). El usuario debería poder ver toda la información, y filtrar por día y/o país, y eso debería reflejarse inmediatamente en la información mostrada en la aplicación.
 
- 
 La información debe ser obtenida de manera estática desde el servidor que almacena los archivos. Opcionalmente, se podría hacer uso de alguna API para obtener información dinámica y actualizada. En caso de realizar esta opción, se debe asegurar el correcto funcionamiento de la aplicación incluso si la API externa deja de funcionar.
 
-## Observaciones	
+## Observaciones
 
-
-Es importante lograr un aspecto atractivo de la aplicación y permitir una interacción intuitiva para el usuario. También se evaluará el código generado para lograr el funcionamiento de la aplicación, en especial, es importante la separación del modelo de datos, la visualización y la lógica de la aplicación. Además, la página debe simular una aplicación profesional, de alguna empresa o institución (nombre y logo incluido). 
+Es importante lograr un aspecto atractivo de la aplicación y permitir una interacción intuitiva para el usuario. También se evaluará el código generado para lograr el funcionamiento de la aplicación, en especial, es importante la separación del modelo de datos, la visualización y la lógica de la aplicación. Además, la página debe simular una aplicación profesional, de alguna empresa o institución (nombre y logo incluido).
 
 Además, debe tener al menos dos temas o estilos generales diferentes y el usuario debe poder elegir uno de ellos. El navegador deberá recordar cualquier cambio que el usuario haga en la aplicación para la próxima vez que el mismo usuario acceda a la página.
 
-
-*   El archivo principal debe denominarse “index.html”
-*   Debe ser un documento **válido HTML5**.
-*   Deben utilizar archivos **CSS externos válidos **para los estilos de la página.
-*   El código Javascript debe estar en uno o más archivos externos al documento HTML. Pueden, y se recomienda, utilizar librerías Javascript para mejorar el aspecto y la usabilidad de la página, siempre y cuando den crédito a los autores apropiadamente.
-*   Cualquier aclaración o comentario adicional sobre la página, debe hacerse en el archivo readme.md del repositorio.
-*   Deben probar la página en **diferentes navegadores**.
-
+- El archivo principal debe denominarse “index.html”
+- Debe ser un documento **válido HTML5**.
+- Deben utilizar archivos **CSS externos válidos **para los estilos de la página.
+- El código Javascript debe estar en uno o más archivos externos al documento HTML. Pueden, y se recomienda, utilizar librerías Javascript para mejorar el aspecto y la usabilidad de la página, siempre y cuando den crédito a los autores apropiadamente.
+- Cualquier aclaración o comentario adicional sobre la página, debe hacerse en el archivo readme.md del repositorio.
+- Deben probar la página en **diferentes navegadores**.
 
 ## Modalidad de Entrega
 
-El proyecto deberá ser un fork de este repositorio. Al momento de hacer el fork, la cátedra asignará un docente a cargo de la corrección del mismo, el cual deberá ser agregado como colaborador al proyecto. 
+El proyecto deberá ser un fork de este repositorio. Al momento de hacer el fork, la cátedra asignará un docente a cargo de la corrección del mismo, el cual deberá ser agregado como colaborador al proyecto.
 
 La entrega corresponde a un Pull Request desde el branch "master" al branch "entrega" del fork del usuario del Alumno, asignando al docente a cargo de la corrección. Se debe incluir en el mensaje del PR un link a la aplicación funcionando utilizando GitHub pages.
 
 La corrección del mismo será a través de los comentarios que permite realizar GitHub en su página. Y el resultado del proyecto estará asociado al estado final del PR, que puede ser:
 
-*   Approved: Aprobado :D
-*   Request Changes: Re-entrega, se explicará en el mensaje, qué es lo que hay que corregir.
+- Approved: Aprobado :D
+- # Request Changes: Re-entrega, se explicará en el mensaje, qué es lo que hay que corregir.
+  La implementación de esta página web corresponde como proyecto de la materia Ingeniería de Aplicaciones Web correspondiente al primer
+  cuatrimestre de año 2020.
+
+La aplicación web se implemento utilizando las técnologias HTML, CSS y Javascript, junto con
+los frameworks Bootstrap y JQuery para facilitar el desarrollo.
+
+Esta permite analizar un texto ingresado contando la cantidad de palabras, párrafos, caracteres, vocales,
+consonantes y tildes del mismo. También permite buscar una frase, palabra o letra y contar la cantidad de
+apariciones de estas en el texto, y luego mostrar abajo las frases que contienen esos datos,
+mostrando los 25 caracteres anteriores y posteriores si es que existen.
+
+Vamos a permitir que se cambien el tema o estilo general de la página con dos opciones, uno claro
+y otra oscuro y se va a guardar la opción elegida en el navegador al cerrar la página.
+Esto quiere decir que al volverla a abrir en cualquier otro momento va a estar asignado el tema
+que había sido elegido anteriormente.
+
+Y por último vamos a guardar los últimos 5 textos analizados junto con sus datos principales
+(palabas, párrafos y caracteres), que se van a mostrar al final de la página con los datos almacenados
+y con la opción de analizar nuevamente y poder consultar sobre sus vocales, consonantes y tildes,
+y buscar subtextos en el texto. Estos textos van a ser mostrados al cargar la página y se van a ir
+actualizando al ir analizando nuevos textos, mostrandose desde el más reciente analizado al menos.
+
+<<<<<<< HEAD
+El link de la explicación del proyecto es el siguiente:
+https://youtu.be/rAaG_4BjMuY
+=======
+El link a la pagina es https://felipefern.github.io/proyecto-1/index.html
+>>>>>>> 7e99c51d9c65f4fb7536adc290d12355bcf15fc2
