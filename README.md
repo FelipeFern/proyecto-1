@@ -58,27 +58,28 @@ La entrega corresponde a un Pull Request desde el branch "master" al branch "ent
 La corrección del mismo será a través de los comentarios que permite realizar GitHub en su página. Y el resultado del proyecto estará asociado al estado final del PR, que puede ser:
 
 - Approved: Aprobado :D
-- Request Changes: Re-entrega, se explicará en el mensaje, qué es lo que hay que corregir.
-=======
-La implementación de esta página web corresponde como proyecto de la materia Ingeniería de Aplicaciones Web correspondiente al primer
-cuatrimestre de año 2020.					 
+- # Request Changes: Re-entrega, se explicará en el mensaje, qué es lo que hay que corregir.
+  La implementación de esta página web corresponde como proyecto de la materia Ingeniería de Aplicaciones Web correspondiente al primer
+  cuatrimestre de año 2020.
 
-La aplicación web se implemento utilizando las técnologias HTML, CSS y Javascript, junto con 
+La aplicación web se implemento utilizando las técnologias HTML, CSS y Javascript, junto con
 los frameworks Bootstrap y JQuery para facilitar el desarrollo.
 
-Esta permite analizar un texto ingresado contando la cantidad de palabras, párrafos, caracteres, vocales, 
-consonantes y tildes del mismo. También permite buscar una frase, palabra o letra y contar la cantidad de 
-apariciones de estas en el texto, y luego mostrar abajo las frases que contienen esos datos, 
+Esta permite analizar un texto ingresado contando la cantidad de palabras, párrafos, caracteres, vocales,
+consonantes y tildes del mismo. También permite buscar una frase, palabra o letra y contar la cantidad de
+apariciones de estas en el texto, y luego mostrar abajo las frases que contienen esos datos,
 mostrando los 25 caracteres anteriores y posteriores si es que existen.
 
-Vamos a permitir que se cambien el tema o estilo general de la página con dos opciones, uno claro 
-y otra oscuro y se va a guardar la opción elegida en el navegador al cerrar la página. 
-Esto quiere decir que al volverla a abrir en cualquier otro momento va a estar asignado el tema 
+Vamos a permitir que se cambien el tema o estilo general de la página con dos opciones, uno claro
+y otra oscuro y se va a guardar la opción elegida en el navegador al cerrar la página.
+Esto quiere decir que al volverla a abrir en cualquier otro momento va a estar asignado el tema
 que había sido elegido anteriormente.
 
-Y por último vamos a guardar los últimos 5 textos analizados junto con sus datos principales 
-(palabas, párrafos y caracteres), que se van a mostrar al final de la página con los datos almacenados 
-y con la opción de analizar nuevamente y poder consultar sobre sus vocales, consonantes y tildes, 
+Y por último vamos a guardar los últimos 5 textos analizados junto con sus datos principales
+(palabas, párrafos y caracteres), que se van a mostrar al final de la página con los datos almacenados
+y con la opción de analizar nuevamente y poder consultar sobre sus vocales, consonantes y tildes,
 y buscar subtextos en el texto. Estos textos van a ser mostrados al cargar la página y se van a ir
 actualizando al ir analizando nuevos textos, mostrandose desde el más reciente analizado al menos.
->>>>>>> b66dfcb7e6b1578e86ed92ac1442e5f3bd59442d
+
+El link de la explicación del proyecto es el siguiente:
+https://youtu.be/rAaG_4BjMuY

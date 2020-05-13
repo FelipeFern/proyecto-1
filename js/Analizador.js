@@ -7,21 +7,22 @@ var tilde = 0;
 var vowels = [97, 101, 105, 111, 117, 225, 233, 237, 243, 250];
 
 function contar() {
-	var texto = $("textarea#TextoIngresado").val();
-	texto = texto.toLowerCase();
+	var textoNormal = $("textarea#TextoIngresado").val();
 
-	for (var i = 0; i < texto.length; i++) {
-		var c = texto.charCodeAt(i);
+	textoMinuscula = textoNormal.toLowerCase();
+
+	for (var i = 0; i < textoMinuscula.length; i++) {
+		var c = textoMinuscula.charCodeAt(i);
 		contarVocalTilde(c);
 		contarConsonanteCaracter(c);
-		contarPalabras(c, texto.charCodeAt(i - 1));
+		contarPalabras(c, textoMinuscula.charCodeAt(i - 1));
 	}
-	if (c != "32" && c != "10" && texto.length > 0) palabra++;
+	if (c != "32" && c != "10" && textoMinuscula.length > 0) palabra++;
 
-	contarParrafos(texto);
+	contarParrafos(textoMinuscula);
 
 	mostrarResultados();
-	guardarDatos(texto, palabra, parrafo, caracter);
+	guardarDatos(textoNormal, palabra, parrafo, caracter);
 	reiniciarVariables();
 }
 
