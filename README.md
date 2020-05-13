@@ -81,5 +81,9 @@ y con la opción de analizar nuevamente y poder consultar sobre sus vocales, con
 y buscar subtextos en el texto. Estos textos van a ser mostrados al cargar la página y se van a ir
 actualizando al ir analizando nuevos textos, mostrandose desde el más reciente analizado al menos.
 
+<<<<<<< HEAD
 El link de la explicación del proyecto es el siguiente:
 https://youtu.be/rAaG_4BjMuY
+=======
+El link a la pagina es https://felipefern.github.io/proyecto-1/index.html
+>>>>>>> 7e99c51d9c65f4fb7536adc290d12355bcf15fc2
